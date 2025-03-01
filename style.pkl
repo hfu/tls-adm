@@ -1,0 +1,35 @@
+hidden pmtiles = "pmtiles://a.pmtiles"
+hidden background_color = "#333"
+const red = "#da291c" // Pantone 485
+const yellow = "#ffc72c" // Pantone 123
+
+class Adm {
+  id: String? `source-layer` = id
+  source = "a" type = "fill"
+  paint { `fill-color` = red }
+}
+
+version = 8
+zoom = 7.98
+center = new Listing { 125.629 -8.938 }
+sources {
+  a {
+    type = "vector" url = pmtiles
+    attribution = "WHO / OCHA"
+  }
+}
+layers = new Listing {
+  new {
+    id = "background" type = "background"
+    paint { `background-color` = background_color }
+  }
+  new Adm { id = "adm0" }
+  new Adm { id = "adm1" }
+  new Adm { id = "adm2" }
+  new Adm { id = "adm3" }
+  new {
+    id = "bndl" type = "line" source = "a"
+    `source-layer` = "bndl"
+    paint { `line-color` = background_color `line-width` = 1 }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "red": "#da291c",
+  "yellow": "#ffc72c",
+  "version": 8,
+  "zoom": 7.98,
+  "center": [
+    116.691
+  ],
+  "sources": {
+    "a": {
+      "type": "vector",
+      "url": "pmtiles://a.pmtiles",
+      "attribution": "WHO / OCHA"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#333"
+      }
+    },
+    {
+      "id": "adm0",
+      "source-layer": "adm0",
+      "source": "a",
+      "type": "fill",
+      "paint": {
+        "fill-color": "#da291c"
+      }
+    },
+    {
+      "id": "adm1",
+      "source-layer": "adm1",
+      "source": "a",
+      "type": "fill",
+      "paint": {
+        "fill-color": "#da291c"
+      }
+    },
+    {
+      "id": "adm2",
+      "source-layer": "adm2",
+      "source": "a",
+      "type": "fill",
+      "paint": {
+        "fill-color": "#da291c"
+      }
+    },
+    {
+      "id": "adm3",
+      "source-layer": "adm3",
+      "source": "a",
+      "type": "fill",
+      "paint": {
+        "fill-color": "#da291c"
+      }
+    },
+    {
+      "id": "bndl",
+      "type": "line",
+      "source": "a",
+      "source-layer": "bndl",
+      "paint": {
+        "line-color": "#333",
+        "line-width": 1
+      }
+    }
+  ]
+}
