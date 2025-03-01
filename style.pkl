@@ -11,7 +11,10 @@ class Adm {
 
 version = 8
 zoom = 7.98
-center = new Listing { 125.629 -8.938 }
+center = new Listing {
+  125.629
+  -8.938
+}
 sources {
   a {
     type = "vector" url = pmtiles
