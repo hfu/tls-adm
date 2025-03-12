@@ -19,8 +19,8 @@ body { margin: 0; padding: 0; font-family: 'Geist Mono', monospace; }
 <div id="map"></div>
 <div id="bottom">Timor-Leste</div>
 <script> 
-const red = "#da291c" // Pantone 485
-const yellow = "#ffc72c" // Pantone 123
+const background = "#A0E034"
+const foreground = "#E0DE34"
 const layers = ['adm0', 'adm1', 'adm2', 'adm3']
 
 const bottom = document.getElementById('bottom')
@@ -39,13 +39,13 @@ maplibregl.addProtocol('pmtiles', (new pmtiles.Protocol()).tile)
         'match',
         ['get', 'code'],
         f.properties.code,
-        yellow,
-        red
+        foreground,
+        background
       ])
       bottom.innerHTML = f.properties.name
     } else {
       for (layer of layers) {
-        map.setPaintProperty(layer, 'fill-color', red)
+        map.setPaintProperty(layer, 'fill-color', background)
       }
       bottom.innerHTML = '-'
     }

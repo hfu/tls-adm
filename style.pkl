@@ -1,12 +1,12 @@
 hidden pmtiles = "pmtiles://a.pmtiles"
-hidden background_color = "#333"
-const red = "#da291c" // Pantone 485
-const yellow = "#ffc72c" // Pantone 123
+hidden background_color = "#3234F5"
+const background = "#A0E034"
+const foreground = "#E0DE34"
 
 class Adm {
   id: String? `source-layer` = id
   source = "a" type = "fill"
-  paint { `fill-color` = red }
+  paint { `fill-color` = background }
 }
 
 version = 8
